@@ -75,6 +75,27 @@ dùng như role brief cho Codex, không phải custom subagent type của một 
 
 `code-review` `perf-profile` `balance-check` `asset-audit` `scope-check` `tech-debt` `release-checklist` `launch-checklist` `hotfix`
 
+## Preview
+
+<p align="center">
+  <img src="plugins/codex-game-studio/assets/preview-studio-overview.png" alt="Ảnh preview tổng quan Codex Game Studio" width="100%" />
+</p>
+
+<table>
+  <tr>
+    <td width="50%">
+      <img src="plugins/codex-game-studio/assets/preview-workflow-router.png" alt="Ảnh preview luồng workflow" />
+    </td>
+    <td width="50%">
+      <img src="plugins/codex-game-studio/assets/preview-reference-stack.png" alt="Ảnh preview reference và validation" />
+    </td>
+  </tr>
+  <tr>
+    <td>Các lane workflow rõ ràng cho onboarding, design, implementation và release control.</td>
+    <td>Hệ tài liệu chung, engine reference và validation rule giúp Codex bám đúng repo.</td>
+  </tr>
+</table>
+
 ## Bắt Đầu Nhanh
 
 1. Mở repo này trong Codex và để Codex load local marketplace từ `.agents/plugins/marketplace.json`.

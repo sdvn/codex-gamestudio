@@ -75,6 +75,27 @@ as Codex role briefs rather than product-native subagent types.
 
 `code-review` `perf-profile` `balance-check` `asset-audit` `scope-check` `tech-debt` `release-checklist` `launch-checklist` `hotfix`
 
+## Preview
+
+<p align="center">
+  <img src="plugins/codex-game-studio/assets/preview-studio-overview.png" alt="Codex Game Studio overview preview" width="100%" />
+</p>
+
+<table>
+  <tr>
+    <td width="50%">
+      <img src="plugins/codex-game-studio/assets/preview-workflow-router.png" alt="Workflow router preview" />
+    </td>
+    <td width="50%">
+      <img src="plugins/codex-game-studio/assets/preview-reference-stack.png" alt="Reference and validation preview" />
+    </td>
+  </tr>
+  <tr>
+    <td>Named workflow lanes for onboarding, design, implementation, and release control.</td>
+    <td>Shared docs, engine references, and validation rules that keep Codex grounded.</td>
+  </tr>
+</table>
+
 ## Quick Start
 
 1. Open this repository in Codex and let it load the local marketplace from `.agents/plugins/marketplace.json`.
