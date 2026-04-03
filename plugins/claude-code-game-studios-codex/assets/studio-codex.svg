@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" role="img" aria-labelledby="title desc">
+  <title id="title">Game Studios for Codex</title>
+  <desc id="desc">A green badge with a gamepad and studio grid.</desc>
+  <rect width="256" height="256" rx="40" fill="#14532D"/>
+  <rect x="32" y="32" width="192" height="192" rx="28" fill="#166534"/>
+  <path d="M88 114c0-17.673 14.327-32 32-32h16c17.673 0 32 14.327 32 32v28c0 17.673-14.327 32-32 32h-16c-17.673 0-32-14.327-32-32v-28Z" fill="#DCFCE7"/>
+  <path d="M102 110h18v10h10v18h-10v10h-18v-10H92v-18h10v-10Z" fill="#166534"/>
+  <circle cx="154" cy="124" r="10" fill="#166534"/>
+  <circle cx="178" cy="148" r="10" fill="#166534"/>
+  <path d="M68 64h120" stroke="#86EFAC" stroke-linecap="round" stroke-width="8"/>
+  <path d="M68 192h120" stroke="#86EFAC" stroke-linecap="round" stroke-width="8"/>
+  <path d="M192 68v120" stroke="#86EFAC" stroke-linecap="round" stroke-width="8"/>
+</svg>
