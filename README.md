@@ -16,6 +16,10 @@
   <a href="plugins/codex-game-studio/.codex-plugin/plugin.json"><img src="https://img.shields.io/badge/runtime-Codex-111827" alt="Codex runtime"></a>
 </p>
 
+<p align="center">
+  <strong>English</strong> · <a href="README.vi.md">Tiếng Việt</a>
+</p>
+
 > This repository is a Codex-native port of the original
 > [`Donchitos/Claude-Code-Game-Studios`](https://github.com/Donchitos/Claude-Code-Game-Studios),
 > cleaned and reorganized to feel native in Codex.
