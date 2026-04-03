@@ -1,0 +1,48 @@
+{
+  "name": "codex-game-studio",
+  "version": "0.1.0",
+  "description": "Codex-native game studio toolkit with structured workflows, role briefs, templates, and engine references.",
+  "author": {
+    "name": "sdvn",
+    "email": "noreply@example.com",
+    "url": "https://github.com/sdvn"
+  },
+  "homepage": "https://github.com/sdvn/codex-gamestudio",
+  "repository": "https://github.com/sdvn/codex-gamestudio",
+  "license": "MIT",
+  "keywords": [
+    "games",
+    "game-design",
+    "game-production",
+    "godot",
+    "unity",
+    "unreal",
+    "workflow",
+    "qa",
+    "studio"
+  ],
+  "skills": "./skills/",
+  "interface": {
+    "displayName": "Codex Game Studio",
+    "shortDescription": "Structured game production workflows for Codex",
+    "longDescription": "Plan, review, implement, and ship game projects in Codex with role-based workflows, reusable templates, and engine reference notes.",
+    "developerName": "sdvn",
+    "category": "Coding",
+    "capabilities": [
+      "Interactive",
+      "Write"
+    ],
+    "websiteURL": "https://github.com/sdvn/codex-gamestudio",
+    "privacyPolicyURL": "https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement",
+    "termsOfServiceURL": "https://docs.github.com/en/site-policy/github-terms/github-terms-of-service",
+    "defaultPrompt": [
+      "Route this repo through game-studio",
+      "Run a combat feature through team-combat",
+      "Review my game design or sprint plan"
+    ],
+    "brandColor": "#14532D",
+    "composerIcon": "./assets/studio-codex.svg",
+    "logo": "./assets/studio-codex.svg",
+    "screenshots": []
+  }
+}

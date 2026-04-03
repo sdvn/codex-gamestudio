@@ -5,10 +5,10 @@
   },
   "plugins": [
     {
-      "name": "claude-code-game-studios-codex",
+      "name": "codex-game-studio",
       "source": {
         "source": "local",
-        "path": "./plugins/claude-code-game-studios-codex"
+        "path": "./plugins/codex-game-studio"
       },
       "policy": {
         "installation": "AVAILABLE",

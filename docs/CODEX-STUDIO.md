@@ -1,7 +1,6 @@
 # Codex Game Studio Configuration
 
-This file is the project-level configuration document for the Codex port of
-Game Studios.
+This file is the project-level configuration document for Codex Game Studio.
 
 ## Technology Stack
 
@@ -14,7 +13,7 @@ Game Studios.
 ## Project Structure
 
 See:
-`plugins/claude-code-game-studios-codex/references/studio/directory-structure.md`
+`plugins/codex-game-studio/references/studio/directory-structure.md`
 
 ## Engine Version Reference
 
@@ -29,7 +28,7 @@ See:
 ## Coordination Rules
 
 See:
-`plugins/claude-code-game-studios-codex/references/studio/coordination-rules.md`
+`plugins/codex-game-studio/references/studio/coordination-rules.md`
 
 ## Collaboration Protocol
 
@@ -46,9 +45,9 @@ Every task follows:
 ## Coding Standards
 
 See:
-`plugins/claude-code-game-studios-codex/references/studio/coding-standards.md`
+`plugins/codex-game-studio/references/studio/coding-standards.md`
 
 ## Context Management
 
 See:
-`plugins/claude-code-game-studios-codex/references/studio/context-management.md`
+`plugins/codex-game-studio/references/studio/context-management.md`
