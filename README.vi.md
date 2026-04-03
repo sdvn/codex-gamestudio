@@ -3,13 +3,13 @@
   <p align="center">
     Biến một phiên Codex thành một game studio có workflow rõ ràng.
     <br />
-    38 workflow. 48 role brief. Một bộ kit production theo hướng Codex-first.
+    39 workflow. 48 role brief. Một bộ kit production theo hướng Codex-first.
   </p>
 </p>
 
 <p align="center">
   <a href="LICENSE"><img src="https://img.shields.io/badge/license-MIT-blue.svg" alt="MIT License"></a>
-  <a href="plugins/codex-game-studio/skills"><img src="https://img.shields.io/badge/workflows-38-1f7a1f" alt="38 workflows"></a>
+  <a href="plugins/codex-game-studio/skills"><img src="https://img.shields.io/badge/workflows-39-1f7a1f" alt="39 workflows"></a>
   <a href="plugins/codex-game-studio/references/roles"><img src="https://img.shields.io/badge/roles-48-0f766e" alt="48 roles"></a>
   <a href="plugins/codex-game-studio/references/templates"><img src="https://img.shields.io/badge/templates-26-9a3412" alt="26 templates"></a>
   <a href="docs/engine-reference"><img src="https://img.shields.io/badge/engine%20refs-46-334155" alt="46 engine references"></a>
@@ -39,7 +39,7 @@ reference note theo engine.
 
 | Hạng mục | Số lượng | Mô tả |
 |----------|----------|-------|
-| **Workflow** | 38 | Điểm vào skill cho planning, review, production, implementation và release |
+| **Workflow** | 39 | Điểm vào skill cho planning, review, production, implementation và release |
 | **Role Brief** | 48 | Brief chuyên môn cho design, programming, art, QA, production và engine work |
 | **Template** | 26 | Mẫu tài liệu cho GDD, ADR, milestone, retrospective, release và reverse-documentation |
 | **Engine Reference** | 46 | Ghi chú theo phiên bản cho Godot, Unity và Unreal |
@@ -61,7 +61,7 @@ dùng như role brief cho Codex, không phải custom subagent type của một 
 
 **Khởi tạo dự án**
 
-`game-studio` `start` `setup-engine` `project-stage-detect`
+`game-studio` `start` `setup-engine` `bootstrap-engine` `project-stage-detect`
 
 **Thiết kế và lập kế hoạch**
 
@@ -105,12 +105,13 @@ dùng như role brief cho Codex, không phải custom subagent type của một 
    ```text
    Use game-studio to route this repo
    Run start and onboard me from scratch
-   Use setup-engine for a Godot project
+   Use setup-engine for a Godot project, then run bootstrap-engine
    ```
 
 4. Giữ các quyết định chung của studio trong `docs/CODEX-STUDIO.md`.
 5. Giữ quy ước theo engine trong `docs/studio/technical-preferences.md`.
-6. Khi dự án đã vào guồng, gọi trực tiếp workflow phù hợp với phần việc đang làm.
+6. Chạy `bootstrap-engine` sau khi pin engine xong nếu bạn cần bộ file runtime thật.
+7. Khi dự án đã vào guồng, gọi trực tiếp workflow phù hợp với phần việc đang làm.
 
 ## Bố Cục Repo
 
@@ -135,9 +136,10 @@ dùng như role brief cho Codex, không phải custom subagent type của một 
 
 1. Bắt đầu bằng `game-studio` nếu muốn route tổng quát, hoặc `start` nếu repo vẫn đang là template trắng.
 2. Chạy `setup-engine` một lần để chốt engine, ngôn ngữ và đường dẫn reference đang dùng.
-3. Dùng các skill planning như `brainstorm`, `map-systems`, `design-system` và `architecture-decision`.
-4. Chuyển sang triển khai với các workflow `team-*` phù hợp với lát cắt công việc hiện tại.
-5. Dùng `gate-check`, `release-checklist`, `launch-checklist` và `hotfix` để kiểm soát giai đoạn sau.
+3. Chạy `bootstrap-engine` để tạo runtime scaffold thật cho Godot, Unity hoặc Unreal.
+4. Dùng các skill planning như `brainstorm`, `map-systems`, `design-system` và `architecture-decision`.
+5. Chuyển sang triển khai với các workflow `team-*` phù hợp với lát cắt công việc hiện tại.
+6. Dùng `gate-check`, `release-checklist`, `launch-checklist` và `hotfix` để kiểm soát giai đoạn sau.
 
 ## File Quan Trọng
 

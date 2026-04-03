@@ -38,6 +38,7 @@ Do not stay here longer than needed. Classify the request, recommend the exact n
    - `new idea`: use `start` or `brainstorm`
    - `existing project triage`: use `project-stage-detect`, then `gate-check` if phase readiness matters
    - `engine choice or setup`: use `setup-engine`
+   - `engine scaffold or repo bootstrap`: use `bootstrap-engine` once the stack is pinned but runtime files do not exist yet
    - `system planning`: use `map-systems` or `design-system`
    - `feature implementation`: use the relevant `team-*` workflow
    - `review or analysis`: use `code-review`, `design-review`, `perf-profile`, `balance-check`, `asset-audit`, `scope-check`, or `tech-debt`
@@ -76,5 +77,6 @@ If no `team-*` workflow fits, route to the single-discipline skill that best mat
 
 - "Help me start this game project from scratch."
 - "Figure out what this repo needs next."
+- "Bootstrap the actual engine project after setup."
 - "Route me to the right workflow for a combat feature."
 - "I need the proper game-studio path for release prep."

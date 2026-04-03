@@ -166,7 +166,7 @@ def render_overview() -> Image.Image:
     rounded(draw, (1228, 94, 1498, 156), fill=COLOR["panel_alt"], outline=COLOR["border"], width=2, radius=26)
     draw.text((1262, 113), "Codex-native plugin", font=BODY_SM, fill=COLOR["accent"])
 
-    metric_card(draw, 86, 258, "38", "Workflow entrypoints", COLOR["accent"])
+    metric_card(draw, 86, 258, "39", "Workflow entrypoints", COLOR["accent"])
     metric_card(draw, 372, 258, "48", "Role briefs", COLOR["amber"])
     metric_card(draw, 658, 258, "26", "Templates", "#60A5FA")
     metric_card(draw, 944, 258, "46", "Engine references", "#F472B6")
@@ -192,15 +192,19 @@ def render_overview() -> Image.Image:
     for label in ["game-studio", "start", "setup-engine"]:
         x = chip(draw, x, y, label)
     x = 936
-    y = 648
-    for label in ["brainstorm", "map-systems", "design-system"]:
+    y = 638
+    for label in ["bootstrap-engine", "brainstorm"]:
         x = chip(draw, x, y, label, fill=COLOR["panel_soft"])
     x = 936
-    y = 716
-    for label in ["team-combat", "team-ui", "team-release"]:
+    y = 696
+    for label in ["map-systems", "design-system"]:
         x = chip(draw, x, y, label)
     x = 936
-    y = 784
+    y = 754
+    for label in ["team-combat", "team-ui", "team-release"]:
+        x = chip(draw, x, y, label, fill=COLOR["panel_soft"])
+    x = 936
+    y = 812
     for label in ["gate-check", "perf-profile", "launch-checklist"]:
         x = chip(draw, x, y, label, fill=COLOR["panel_soft"])
 
@@ -234,7 +238,7 @@ def render_router() -> Image.Image:
     draw.text((1238, 108), "main protected", font=BODY_SM, fill=COLOR["accent"])
 
     boxes = [
-        ((86, 310, 424, 796), "Kickoff", ["game-studio", "start", "setup-engine", "project-stage-detect"], COLOR["accent"]),
+        ((86, 310, 424, 796), "Kickoff", ["game-studio", "start", "setup-engine", "bootstrap-engine", "project-stage-detect"], COLOR["accent"]),
         ((454, 310, 792, 796), "Design", ["brainstorm", "map-systems", "design-review", "architecture-decision"], COLOR["amber"]),
         ((822, 310, 1160, 796), "Implementation", ["team-combat", "team-ui", "team-level", "team-release"], "#60A5FA"),
         ((1190, 310, 1528, 796), "Control", ["gate-check", "perf-profile", "release-checklist", "hotfix"], "#F472B6"),
@@ -310,7 +314,7 @@ def render_references() -> Image.Image:
     draw.text((1148, 672), "README + README.vi -> shared preview assets", font=BODY_SM, fill=COLOR["slate"])
 
     rounded(draw, (86, 816, 1528, 892), fill=COLOR["panel_soft"], outline=COLOR["border"], width=2, radius=24)
-    draw.text((118, 840), "Use game-studio to route the repo, setup-engine to pin the stack, and gate-check to control phase changes.", font=BODY_SM, fill=COLOR["text"])
+    draw.text((118, 840), "Use game-studio to route the repo, setup-engine plus bootstrap-engine to pin the stack, and gate-check to control phase changes.", font=BODY_SM, fill=COLOR["text"])
     return image
 
 
