@@ -30,7 +30,7 @@ the conversation opener.
 
 Check:
 - **Engine configured?** Read `docs/studio/technical-preferences.md`. If the
-  Engine field contains `[TO BE CONFIGURED]`, the engine is not set.
+  Engine field says `Not configured yet`, the engine is not set.
 - **Game concept exists?** Check for `design/gdd/game-concept.md`.
 - **Source code exists?** Glob for source files in `src/` (`*.gd`, `*.cs`,
   `*.cpp`, `*.h`, `*.rs`, `*.py`, `*.js`, `*.ts`).

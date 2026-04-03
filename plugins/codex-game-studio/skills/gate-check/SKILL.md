@@ -76,7 +76,7 @@ The project progresses through these stages:
 ### Gate: Technical Setup → Pre-Production
 
 **Required Artifacts:**
-- [ ] Engine chosen (docs/CODEX-STUDIO.md Technology Stack is not `[CHOOSE]`)
+- [ ] Engine chosen (docs/CODEX-STUDIO.md Technology Stack no longer says `Not configured yet`)
 - [ ] Technical preferences configured (`docs/studio/technical-preferences.md` populated)
 - [ ] At least 1 Architecture Decision Record in `docs/architecture/`
 - [ ] Engine reference docs exist in `docs/engine-reference/`

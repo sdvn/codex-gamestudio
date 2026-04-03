@@ -4,11 +4,11 @@ This file is the project-level configuration document for Codex Game Studio.
 
 ## Technology Stack
 
-- **Engine**: [CHOOSE: Godot 4 / Unity / Unreal Engine 5]
-- **Language**: [CHOOSE: GDScript / C# / C++ / Blueprint]
+- **Engine**: Not configured yet. Run `setup-engine` to pin the project engine and version.
+- **Language**: Set during engine setup.
 - **Version Control**: Git with trunk-based development
-- **Build System**: [SPECIFY after choosing engine]
-- **Asset Pipeline**: [SPECIFY after choosing engine]
+- **Build System**: Set by the selected engine workflow.
+- **Asset Pipeline**: Set by the selected engine workflow.
 
 ## Project Structure
 
@@ -18,7 +18,7 @@ See:
 ## Engine Version Reference
 
 - Active engine reference:
-  `docs/engine-reference/godot/VERSION.md`
+  `docs/engine-reference/README.md`
 
 ## Technical Preferences
 

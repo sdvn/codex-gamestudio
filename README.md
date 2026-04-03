@@ -71,6 +71,22 @@ as Codex role briefs rather than product-native subagent types.
 
 `code-review` `perf-profile` `balance-check` `asset-audit` `scope-check` `tech-debt` `release-checklist` `launch-checklist` `hotfix`
 
+## Quick Start
+
+1. Open this repository in Codex and let it load the local marketplace from `.agents/plugins/marketplace.json`.
+2. Confirm the `codex-game-studio` plugin is available. If the plugin list looks stale, reopen the workspace so Codex reloads local plugins.
+3. Start with one of these prompts:
+
+   ```text
+   Use game-studio to route this repo
+   Run start and onboard me from scratch
+   Use setup-engine for a Godot project
+   ```
+
+4. Keep shared studio decisions in `docs/CODEX-STUDIO.md`.
+5. Keep engine-specific conventions in `docs/studio/technical-preferences.md`.
+6. Use the workflow skills directly once the project is underway.
+
 ## Repository Layout
 
 ```text
@@ -90,13 +106,13 @@ as Codex role briefs rather than product-native subagent types.
 └── production/session-state/
 ```
 
-## How To Use
+## Typical Flow
 
-1. Open the repo in Codex.
-2. Let Codex use the local plugin from `plugins/codex-game-studio/`.
-3. Start with `game-studio` if you want routing, or jump directly into a named workflow.
-4. Keep project-level choices in `docs/CODEX-STUDIO.md`.
-5. Keep engine-specific decisions in `docs/studio/technical-preferences.md` and `docs/engine-reference/`.
+1. Start with `game-studio` if you want routing, or `start` if the repo is still a blank slate.
+2. Run `setup-engine` once to pin the engine, language, and reference path.
+3. Use planning skills such as `brainstorm`, `map-systems`, `design-system`, and `architecture-decision`.
+4. Move into implementation with the `team-*` workflows that fit the current slice of work.
+5. Use `gate-check`, `release-checklist`, `launch-checklist`, and `hotfix` to control later phases.
 
 ## Core Files
 

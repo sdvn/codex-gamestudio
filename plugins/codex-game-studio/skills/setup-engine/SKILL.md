@@ -85,7 +85,7 @@ Once the engine is chosen:
 ## 4. Update docs/CODEX-STUDIO.md Technology Stack
 
 Read `docs/CODEX-STUDIO.md` and update the Technology Stack section. Replace the
-`[CHOOSE]` placeholders with the actual values:
+starter "Not configured yet" entries with the actual values:
 
 **For Godot:**
 ```markdown
@@ -147,10 +147,12 @@ engine-appropriate defaults. Read the existing template first, then fill in:
 - Files: Match class without prefix (e.g., `PlayerController.h`)
 
 ### Remaining Sections
-- Performance Budgets: Leave as `[TO BE CONFIGURED]` with a suggestion:
-  > "Typical targets: 60fps / 16.6ms frame budget. Want to set these now?"
+- Performance Budgets: Set sensible starter targets instead of leaving placeholders:
+  > "Typical starting targets are 60 FPS and a 16.6 ms frame budget. Want to
+  > adjust these for your platforms now?"
 - Testing: Suggest engine-appropriate framework (GUT for Godot, NUnit for Unity, etc.)
-- Forbidden Patterns / Allowed Libraries: Leave as placeholder
+- Forbidden Patterns / Allowed Libraries: Keep the existing guidance unless the
+  user wants to pin approved or forbidden dependencies immediately
 
 ### Collaborative Step
 Present the filled-in preferences to the user:
