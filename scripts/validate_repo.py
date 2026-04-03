@@ -23,6 +23,11 @@ EXPECTED_COUNTS = {
 }
 
 EXPECTED_REPO_URL = "https://github.com/sdvn/codex-gamestudio"
+EXPECTED_SCREENSHOTS = [
+    "./assets/preview-studio-overview.png",
+    "./assets/preview-workflow-router.png",
+    "./assets/preview-reference-stack.png",
+]
 FORBIDDEN_TOKENS = (
     "[TO BE CONFIGURED]",
     "[CHOOSE:",
@@ -95,6 +100,15 @@ def validate_manifest(errors: list[str]) -> None:
     interface = manifest.get("interface", {})
     if interface.get("websiteURL") != EXPECTED_REPO_URL:
         errors.append(f"Plugin interface websiteURL must point to {EXPECTED_REPO_URL}.")
+    screenshots = interface.get("screenshots", [])
+    if screenshots != EXPECTED_SCREENSHOTS:
+        errors.append(
+            "Plugin screenshots must match the expected preview assets in plugin.json."
+        )
+    for relative_path in EXPECTED_SCREENSHOTS:
+        screenshot_path = PLUGIN_DIR / relative_path.removeprefix("./")
+        if not screenshot_path.is_file():
+            errors.append(f"Screenshot asset is missing: {screenshot_path.relative_to(ROOT)}")
 
     plugins = marketplace.get("plugins", [])
     if len(plugins) != 1:
@@ -138,6 +152,7 @@ def validate_required_files(errors: list[str]) -> None:
     required_files = [
         ROOT / "docs" / "CODEX-STUDIO.md",
         ROOT / "docs" / "studio" / "technical-preferences.md",
+        ROOT / "README.vi.md",
         PLUGIN_DIR / "skills" / "game-studio" / "SKILL.md",
         PLUGIN_DIR / "skills" / "start" / "SKILL.md",
         PLUGIN_DIR / "skills" / "setup-engine" / "SKILL.md",
@@ -152,6 +167,19 @@ def validate_required_files(errors: list[str]) -> None:
         errors.append(
             "docs/CODEX-STUDIO.md should point at docs/engine-reference/README.md until an engine is pinned."
         )
+
+    readme = read_text(README)
+    readme_vi = read_text(ROOT / "README.vi.md")
+    if 'href="README.vi.md"' not in readme:
+        errors.append("README.md should link to README.vi.md in the language switch.")
+    if 'href="README.md"' not in readme_vi:
+        errors.append("README.vi.md should link back to README.md in the language switch.")
+    for relative_path in EXPECTED_SCREENSHOTS:
+        asset_ref = relative_path.removeprefix("./")
+        if asset_ref not in readme:
+            errors.append(f"README.md should reference preview asset {asset_ref}.")
+        if asset_ref not in readme_vi:
+            errors.append(f"README.vi.md should reference preview asset {asset_ref}.")
 
 
 def main() -> int:

@@ -42,6 +42,10 @@
     "brandColor": "#14532D",
     "composerIcon": "./assets/studio-codex.svg",
     "logo": "./assets/studio-codex.svg",
-    "screenshots": []
+    "screenshots": [
+      "./assets/preview-studio-overview.png",
+      "./assets/preview-workflow-router.png",
+      "./assets/preview-reference-stack.png"
+    ]
   }
 }
