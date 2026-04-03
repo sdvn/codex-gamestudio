@@ -10,8 +10,11 @@
 │   ├── CODEX-STUDIO.md          # Project configuration for Codex workflows
 │   ├── studio/                  # Working technical preferences
 │   └── engine-reference/        # Version-pinned engine notes
-├── src/                         # Game source code (core, gameplay, ai, networking, ui, tools)
-├── assets/                      # Game assets (art, audio, vfx, shaders, data)
+├── src/                         # Godot-oriented runtime code and scenes when the project uses Godot
+├── assets/                      # Shared asset source files for non-Unity pipelines
+├── Assets/                      # Unity runtime assets, scenes, scripts, and tests (if using Unity)
+├── Source/                      # Unreal C++ modules and tests (if using Unreal)
+├── Content/                     # Unreal content root for maps, materials, and Blueprint assets
 ├── design/                      # Game design documents (gdd, narrative, levels, balance)
 ├── tests/                       # Test suites (unit, integration, performance, playtest)
 ├── tools/                       # Build and pipeline tools (ci, build, asset-pipeline)

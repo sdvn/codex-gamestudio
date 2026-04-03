@@ -78,6 +78,7 @@ The project progresses through these stages:
 **Required Artifacts:**
 - [ ] Engine chosen (docs/CODEX-STUDIO.md Technology Stack no longer says `Not configured yet`)
 - [ ] Technical preferences configured (`docs/studio/technical-preferences.md` populated)
+- [ ] Engine project scaffold exists (`project.godot`, `Packages/manifest.json`, or `*.uproject`)
 - [ ] At least 1 Architecture Decision Record in `docs/architecture/`
 - [ ] Engine reference docs exist in `docs/engine-reference/`
 
@@ -104,10 +105,10 @@ The project progresses through these stages:
 ### Gate: Production → Polish
 
 **Required Artifacts:**
-- [ ] `src/` has active code organized into subsystems
-- [ ] All core mechanics from GDD are implemented (cross-reference `design/gdd/` with `src/`)
+- [ ] Runtime code exists in `src/`, `Assets/Scripts/`, or `Source/` and is organized into subsystems
+- [ ] All core mechanics from GDD are implemented (cross-reference `design/gdd/` with the engine-native source roots)
 - [ ] Main gameplay path is playable end-to-end
-- [ ] Test files exist in `tests/`
+- [ ] Test files exist in `tests/`, `Assets/Tests/`, or `Source/*/Tests/`
 - [ ] At least 1 playtest report (or `/playtest-report` has been run)
 
 **Quality Checks:**
@@ -149,14 +150,14 @@ For each item in the target gate:
 ### Artifact Checks
 - Use `Glob` and `Read` to verify files exist and have meaningful content
 - Don't just check existence — verify the file has real content (not just a template header)
-- For code checks, verify directory structure and file counts
+- For code checks, verify directory structure and file counts across `src/`, `Assets/Scripts/`, or `Source/`
 
 ### Quality Checks
 - For test checks: Run the test suite via `Bash` if a test runner is configured
 - For design review checks: `Read` the GDD and check for the 8 required sections
 - For performance checks: `Read` technical-preferences.md and compare against any
   profiling data in `tests/performance/` or recent `/perf-profile` output
-- For localization checks: `Grep` for hardcoded strings in `src/`
+- For localization checks: `Grep` for hardcoded strings in the active runtime roots (`src/`, `Assets/`, `Source/`)
 
 ### Cross-Reference Checks
 - Compare `design/gdd/` documents against `src/` implementations

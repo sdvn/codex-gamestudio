@@ -32,8 +32,10 @@ Check:
 - **Engine configured?** Read `docs/studio/technical-preferences.md`. If the
   Engine field says `Not configured yet`, the engine is not set.
 - **Game concept exists?** Check for `design/gdd/game-concept.md`.
-- **Source code exists?** Glob for source files in `src/` (`*.gd`, `*.cs`,
-  `*.cpp`, `*.h`, `*.rs`, `*.py`, `*.js`, `*.ts`).
+- **Source code exists?** Glob for source files in `src/`, `Assets/Scripts/`,
+  and `Source/` (`*.gd`, `*.cs`, `*.cpp`, `*.h`, `*.rs`, `*.py`, `*.js`, `*.ts`).
+- **Engine scaffold exists?** Check for `project.godot`, `Packages/manifest.json`,
+  or `*.uproject`.
 - **Prototypes exist?** Check for subdirectories in `prototypes/`.
 - **Design docs exist?** Count markdown files in `design/gdd/`.
 - **Production artifacts?** Check for files in `production/sprints/` or
@@ -83,6 +85,7 @@ technical setup — all of that comes later.
 4. Show the recommended path:
    - `/brainstorm` — discover your game concept
    - `/setup-engine` — configure the engine (brainstorm will recommend one)
+   - `/bootstrap-engine` — create the initial runtime scaffold
    - `/map-systems` — decompose the concept into systems and plan GDD writing order
    - `/prototype` — test the core mechanic
    - `/sprint-plan` — plan the first sprint
@@ -97,6 +100,7 @@ The user has a seed but needs help growing it into a concept.
 4. Show the recommended path:
    - `/brainstorm [hint]` — develop the idea into a full concept
    - `/setup-engine` — configure the engine
+   - `/bootstrap-engine` — create the initial runtime scaffold
    - `/map-systems` — decompose the concept into systems and plan GDD writing order
    - `/prototype` — test the core mechanic
    - `/sprint-plan` — plan the first sprint
@@ -116,6 +120,7 @@ The user knows what they want to make but hasn't documented it.
      straight to `/setup-engine` and write the GDD manually afterward
 3. Show the recommended path (adapted to their choice):
    - `/brainstorm` or `/setup-engine` (their pick)
+   - `/bootstrap-engine` — once the engine is pinned and the repo needs real runtime files
    - `/design-review` — validate the concept doc
    - `/map-systems` — decompose the concept into individual systems with dependencies and priorities
    - `/design-system` — author per-system GDDs (guided, section-by-section)
@@ -131,9 +136,11 @@ The user has artifacts already. Figure out what exists and what's missing.
    - "Your engine is [configured as X / not yet configured]..."
 2. Recommend running `/project-stage-detect` for a full analysis
 3. If the engine isn't configured, note that `/setup-engine` should come first
-4. Show the recommended path:
+4. If the engine is configured but no runtime scaffold exists, note that `/bootstrap-engine` should come before implementation work
+5. Show the recommended path:
    - `/project-stage-detect` — full gap analysis
    - `/setup-engine` — if not configured
+   - `/bootstrap-engine` — if the engine is pinned but runtime files are still missing
    - `/design-system` — if systems index exists but GDDs are incomplete
    - `/gate-check` — validate readiness for next phase
    - `/sprint-plan` — organize the work
@@ -164,7 +171,7 @@ once the user has a clear next action.
   project is a fresh template with no artifacts yet. Would Path A or B be a
   better fit?"
 - **User picks A but project has code**: Mention what you found — "I noticed
-  there's already code in `src/`. Did you mean to pick D (existing work)? Or
+  there's already runtime code in the repo. Did you mean to pick D (existing work)? Or
   would you like to start fresh with a new concept?"
 - **User is returning (engine configured, concept exists)**: Skip onboarding
   entirely — "It looks like you're already set up! Your engine is [X] and you

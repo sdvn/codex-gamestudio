@@ -16,7 +16,7 @@ README = ROOT / "README.md"
 ENGINE_REFS_DIR = ROOT / "docs" / "engine-reference"
 
 EXPECTED_COUNTS = {
-    "workflows": 38,
+    "workflows": 39,
     "roles": 48,
     "templates": 26,
     "engine_refs": 46,
@@ -71,8 +71,8 @@ def validate_counts(errors: list[str]) -> None:
 
     readme = read_text(README)
     required_strings = [
-        "38 workflows. 48 role briefs. One Codex-first production kit.",
-        "workflows-38",
+        "39 workflows. 48 role briefs. One Codex-first production kit.",
+        "workflows-39",
         "roles-48",
         "templates-26",
         "engine%20refs-46",
@@ -153,7 +153,9 @@ def validate_required_files(errors: list[str]) -> None:
         ROOT / "docs" / "CODEX-STUDIO.md",
         ROOT / "docs" / "studio" / "technical-preferences.md",
         ROOT / "README.vi.md",
+        ROOT / "scripts" / "bootstrap_engine_project.py",
         PLUGIN_DIR / "skills" / "game-studio" / "SKILL.md",
+        PLUGIN_DIR / "skills" / "bootstrap-engine" / "SKILL.md",
         PLUGIN_DIR / "skills" / "start" / "SKILL.md",
         PLUGIN_DIR / "skills" / "setup-engine" / "SKILL.md",
         ROOT / "docs" / "engine-reference" / "README.md",

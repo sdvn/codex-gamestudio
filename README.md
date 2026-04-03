@@ -3,13 +3,13 @@
   <p align="center">
     Turn one Codex session into a structured game development studio.
     <br />
-    38 workflows. 48 role briefs. One Codex-first production kit.
+    39 workflows. 48 role briefs. One Codex-first production kit.
   </p>
 </p>
 
 <p align="center">
   <a href="LICENSE"><img src="https://img.shields.io/badge/license-MIT-blue.svg" alt="MIT License"></a>
-  <a href="plugins/codex-game-studio/skills"><img src="https://img.shields.io/badge/workflows-38-1f7a1f" alt="38 workflows"></a>
+  <a href="plugins/codex-game-studio/skills"><img src="https://img.shields.io/badge/workflows-39-1f7a1f" alt="39 workflows"></a>
   <a href="plugins/codex-game-studio/references/roles"><img src="https://img.shields.io/badge/roles-48-0f766e" alt="48 roles"></a>
   <a href="plugins/codex-game-studio/references/templates"><img src="https://img.shields.io/badge/templates-26-9a3412" alt="26 templates"></a>
   <a href="docs/engine-reference"><img src="https://img.shields.io/badge/engine%20refs-46-334155" alt="46 engine references"></a>
@@ -39,7 +39,7 @@ reference notes.
 
 | Category | Count | Description |
 |----------|-------|-------------|
-| **Workflows** | 38 | Codex skill entrypoints for planning, reviews, production, implementation, and release |
+| **Workflows** | 39 | Codex skill entrypoints for planning, reviews, production, implementation, and release |
 | **Role Briefs** | 48 | Domain-specific specialist briefs for design, programming, art, QA, production, and engine work |
 | **Templates** | 26 | Reusable docs for GDDs, ADRs, milestones, retrospectives, release work, and reverse-documentation |
 | **Engine References** | 46 | Version-aware notes for Godot, Unity, and Unreal |
@@ -61,7 +61,7 @@ as Codex role briefs rather than product-native subagent types.
 
 **Project setup**
 
-`game-studio` `start` `setup-engine` `project-stage-detect`
+`game-studio` `start` `setup-engine` `bootstrap-engine` `project-stage-detect`
 
 **Design and planning**
 
@@ -105,12 +105,13 @@ as Codex role briefs rather than product-native subagent types.
    ```text
    Use game-studio to route this repo
    Run start and onboard me from scratch
-   Use setup-engine for a Godot project
+   Use setup-engine for a Godot project, then run bootstrap-engine
    ```
 
 4. Keep shared studio decisions in `docs/CODEX-STUDIO.md`.
 5. Keep engine-specific conventions in `docs/studio/technical-preferences.md`.
-6. Use the workflow skills directly once the project is underway.
+6. Run `bootstrap-engine` once the engine is pinned and you need real runtime files.
+7. Use the workflow skills directly once the project is underway.
 
 ## Repository Layout
 
@@ -135,9 +136,10 @@ as Codex role briefs rather than product-native subagent types.
 
 1. Start with `game-studio` if you want routing, or `start` if the repo is still a blank slate.
 2. Run `setup-engine` once to pin the engine, language, and reference path.
-3. Use planning skills such as `brainstorm`, `map-systems`, `design-system`, and `architecture-decision`.
-4. Move into implementation with the `team-*` workflows that fit the current slice of work.
-5. Use `gate-check`, `release-checklist`, `launch-checklist`, and `hotfix` to control later phases.
+3. Run `bootstrap-engine` to create the real runtime scaffold for Godot, Unity, or Unreal.
+4. Use planning skills such as `brainstorm`, `map-systems`, `design-system`, and `architecture-decision`.
+5. Move into implementation with the `team-*` workflows that fit the current slice of work.
+6. Use `gate-check`, `release-checklist`, `launch-checklist`, and `hotfix` to control later phases.
 
 ## Core Files
 

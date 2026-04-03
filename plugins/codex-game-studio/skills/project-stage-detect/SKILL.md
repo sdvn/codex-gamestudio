@@ -37,10 +37,11 @@ Analyze project structure and content:
 - Count narrative docs in `design/narrative/`
 - Count level designs in `design/levels/`
 
-**Source Code** (`src/`):
-- Count source files (language-agnostic)
+**Source Code** (`src/`, `Assets/Scripts/`, `Source/`):
+- Count source files across engine-appropriate roots
 - Identify major systems (directories with 5+ files)
-- Check for core/, gameplay/, ai/, networking/, ui/ directories
+- Check for core/, gameplay/, ai/, networking/, ui/, `Assets/Scripts/Runtime/`,
+  or Unreal `Source/<Project>/` modules
 - Estimate lines of code (rough scale)
 
 **Production Artifacts** (`production/`):
@@ -57,8 +58,8 @@ Analyze project structure and content:
 - Count ADRs (Architecture Decision Records)
 - Check for overview/index documents
 
-**Tests** (`tests/`):
-- Count test files
+**Tests** (`tests/`, `Assets/Tests/`, `Source/*/Tests/`):
+- Count test files across the active runtime roots
 - Estimate test coverage (rough heuristic)
 
 ### 2. Classify Project Stage
@@ -71,9 +72,9 @@ auto-detect using these heuristics (check from most-advanced backward):
 |-------|-----------|
 | **Concept** | No game concept doc, brainstorming phase |
 | **Systems Design** | Game concept exists, systems index missing or incomplete |
-| **Technical Setup** | Systems index exists, engine not configured |
-| **Pre-Production** | Engine configured, `src/` has <10 source files |
-| **Production** | `src/` has 10+ source files, active development |
+| **Technical Setup** | Systems index exists, or engine pinned but runtime scaffold missing |
+| **Pre-Production** | Engine configured, runtime scaffold exists, codebase still small |
+| **Production** | Runtime code exists across `src/`, `Assets/Scripts/`, or `Source/` and active development is underway |
 | **Polish** | Explicit only (set by `/gate-check` Production → Polish gate) |
 | **Release** | Explicit only (set by `/gate-check` Polish → Release gate) |
 
@@ -86,6 +87,7 @@ auto-detect using these heuristics (check from most-advanced backward):
 - "No sprint plans in `production/`. Are you tracking work elsewhere (Jira, Trello, etc.)?"
 - "I found a game concept but no systems index. Have you decomposed the concept into individual systems yet, or should we run `/map-systems`?"
 - "Prototypes directory has 3 projects with no READMEs. Were these experiments, or do they need documentation?"
+- "Your engine is pinned in docs, but I do not see `project.godot`, `Packages/manifest.json`, or a `.uproject`. Should we run `/bootstrap-engine` to create the runtime scaffold?"
 
 ### 4. Generate Stage Report
 
@@ -177,7 +179,8 @@ Wait for user approval before creating the file.
 After generating the report, suggest relevant next steps:
 
 - **Concept exists but no systems index?** → `/map-systems` to decompose into systems
-- **Missing design docs?** → `/reverse-document design src/[system]`
+- **Engine pinned but runtime scaffold missing?** → `/bootstrap-engine`
+- **Missing design docs?** → `/reverse-document design [runtime-system-path]`
 - **Missing architecture docs?** → `/architecture-decision` or `/reverse-document architecture`
 - **Prototypes need documentation?** → `/reverse-document concept prototypes/[name]`
 - **No sprint plan?** → `/sprint-plan`
